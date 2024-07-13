@@ -1,0 +1,229 @@
+Coverage Report Summary Data by file
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/AFE.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         8         6         2    75.00%
+    Conditions                       4         2         2    50.00%
+    Expressions                      5         5         0   100.00%
+    Statements                      41        41         0   100.00%
+    Toggles                        182       161        21    88.46%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/ComSender.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        20        20         0   100.00%
+    Statements                      24        24         0   100.00%
+    Toggles                         48        48         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/LA_dig.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        304       256        48    84.21%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/RAMqueue.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         16        16         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/SPI_RX.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        23        23         0   100.00%
+    Conditions                       3         3         0   100.00%
+    Expressions                      9         9         0   100.00%
+    Statements                      38        38         0   100.00%
+    Toggles                        124       114        10    91.93%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/SPI_TX.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        28        28         0   100.00%
+    Conditions                       6         6         0   100.00%
+    Expressions                      7         7         0   100.00%
+    Statements                      37        37         0   100.00%
+    Toggles                         70        70         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/UART.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         20        20         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/UART_prot.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        32        32         0   100.00%
+    Conditions                       4         4         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                      44        44         0   100.00%
+    Toggles                        112       108         4    96.42%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/UART_rx.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        27        27         0   100.00%
+    Conditions                       5         5         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                      37        37         0   100.00%
+    Toggles                         56        56         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/UART_tx.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        24        24         0   100.00%
+    Conditions                       5         5         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                      30        30         0   100.00%
+    Toggles                         52        52         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/UART_tx_cfg_bd.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        25        25         0   100.00%
+    Conditions                       3         3         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                      30        30         0   100.00%
+    Toggles                         74        72         2    97.29%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/UART_wrapper.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        16        16         0   100.00%
+    Statements                      22        22         0   100.00%
+    Toggles                         50        46         4    92.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/capture.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        31        29         2    93.54%
+    Conditions                       5         4         1    80.00%
+    Statements                      35        35         0   100.00%
+    Toggles                         60        42        18    70.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/channel_sample.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      13        13         0   100.00%
+    Toggles                         36        36         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/chnnl_trig.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        12        12         0   100.00%
+    Expressions                      9         2         7    22.22%
+    Statements                      19        19         0   100.00%
+    Toggles                         12        12         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/clk_rst_smpl.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        33        22        11    66.66%
+    Expressions                      6         1         5    16.66%
+    Statements                      47        37        10    78.72%
+    Toggles                         50        42         8    84.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/cmd_cfg.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                       103        71        32    68.93%
+    Conditions                      36        18        18    50.00%
+    Statements                     116        83        33    71.55%
+    Toggles                        462       295       167    63.85%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/dig_core.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        212       112       100    52.83%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/dual_PWM.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/pll8x.v
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        12        11         1    91.66%
+    Conditions                       6         4         2    66.66%
+    Statements                      21        19         2    90.47%
+    Toggles                         68        46        22    67.64%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/prot_trig.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      6         6         0   100.00%
+    Statements                       3         3         0   100.00%
+    Toggles                         12        11         1    91.66%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/pwm8.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         4         0   100.00%
+    Expressions                      2         1         1    50.00%
+    Statements                       7         7         0   100.00%
+    Toggles                         20        20         0   100.00%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/trigger.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         14         4        10    28.57%
+
+=================================================================================
+=== File: /filespace/a/ahuang62/ECE551/hiimpedance-henchmen-main/trigger_logic.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         4         0   100.00%
+    Conditions                       7         3         4    42.85%
+    Statements                       4         4         0   100.00%
+    Toggles                          2         2         0   100.00%
+
+
+Total Coverage By File (code coverage only, filtered view): 80.15%
+

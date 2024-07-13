@@ -1,0 +1,78 @@
+##################################################################################################
+
+# SYNTHESIS SETUP
+
+read_file -format sverilog {LA_dig.sv UART_wrapper.sv RAMqueue.sv dig_core.sv clk_rst_smpl.sv pwm8.sv dual_PWM.sv UART.sv UART_rx.sv UART_tx.sv cmd_cfg.sv capture.sv channel_sample.sv trigger.sv chnnl_trig.sv trigger_logic.sv prot_trig.sv SPI_RX.sv UART_prot.sv}
+set current_design LA_dig
+
+##################################################################################################
+
+# CLOCK GENERATION
+
+## clock stuff
+create_clock -name clk400MHz -period 1 {clk400MHz}
+create_generated_clock -name "clk" -source [get_port clk400MHz] -divide_by 4 [get_pins iCLKRST/clk]
+create_generated_clock -name "smpl_clk" -source [get_port clk400MHz] -divide_by 1 [get_pins iCLKRST/smpl_clk]
+
+## don't mess with the clocks or reset
+set_dont_touch_network [get_port clk400MHz]
+set_dont_touch_network [get_pins {iCLKRST/clk iCLKRST/smpl_clk}]
+set_dont_touch_network [get_port RST_n]
+
+set_false_path -from [get_cell iDIG/iCMD/decimator*]
+set_false_path -from [get_cell iCOMM/highByte*]
+
+##################################################################################################
+
+# PORT CONFIGURATION
+
+## set up pointers to CH* inputs, RST_n and locked, and RX
+set ch_inputs [get_pins iDIG/CH*]
+set rst_n_and_locked [get_ports {RST_n locked}]
+set rx_input [get_ports RX]
+
+## set input delay for each of the pointers above
+set_input_delay -clock smpl_clk -clock_fall 0.25 $ch_inputs
+set_input_delay -clock clk400MHz 0.25 $rst_n_and_locked
+set_input_delay -clock clk 0.25 $rx_input
+
+## set output delay and load on all outputs
+set_output_delay -clock clk 0.5 [all_outputs]
+set_load 0.05 [all_outputs]
+
+## set drive strength on inputs equal to NAND gate without clock or reset
+set excluded_ports {clk400MHz}
+set prim_inputs [remove_from_collection [all_inputs] $excluded_ports]
+set_driving_cell -lib_cell NAND2X1_LVT -library saed32lvt_tt0p85v25c $prim_inputs
+
+## set wire load model
+set_wire_load_model -name 16000 -library saed32lvt_tt0p85v25c
+
+## set max transition time
+set_max_transition 0.15 [current_design]
+
+##################################################################################################
+
+# COMPILATION AND REPORT GENERATION
+
+## compile, flatten hierarchy, and compile again
+compile -map_effort medium -area_effort medium
+ungroup -all -flatten
+
+## set clk uncertainty to 0.2 ns
+set_clock_uncertainty 0.2 clk
+set_fix_hold clk
+compile -map_effort medium -area_effort high
+
+## produce some reports
+report_timing -path full -delay max -nworst 3 > max_timing.txt
+report_timing -path full -delay min -nworst 3 > min_timing.txt
+report_area > area_report.txt
+
+## flatten hierarchy again
+ungroup -all -flatten
+
+## write netlist
+write -format verilog -output LA_dig.vg
+
+##################################################################################################
